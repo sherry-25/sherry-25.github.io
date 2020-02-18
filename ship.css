@@ -1,0 +1,103 @@
+.sky {
+    width: 1200px;
+    height: 500px;
+    background-color: #aae7ff;
+}
+.wave {
+    position: absolute;
+    width: 1200px;
+}
+
+.wave1 {
+    height: 600px;
+    background-color: #91b9ff;
+    bottom: -460;
+    animation: wave1 5s ease-in-out infinite;
+}
+
+.wave2 {
+    height: 600px;
+    background-color: #91b9ff;
+    opacity: .4;
+    bottom: -440px;
+  animation: wave1 10s ease-in-out infinite;
+}
+.main {
+    width: 150px;
+    height: 33px;
+    background-color: #684000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 130px;
+  transform: skew(20deg);
+  animation: ship 3s linear infinite;
+  animation-direction: alternate;
+}
+
+.main:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    border-top: 30px solid #684000;
+    border-left: 30px solid transparent;
+}
+.main:after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    border-top: 30px solid #684000;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+.main-mast {
+    width: 4px;
+    height: 145px;
+    background-color: #684000;
+    position: absolute;
+    right: 20%;
+    bottom: 33px;
+}
+
+.main-course {
+    width: 75px;
+    height: 120px;
+    background-color: white;
+    position: absolute;
+    right: 20%;
+    top: -143px;
+    border-top-left-radius: 100%;
+}
+
+.fore-course {
+    position: absolute;
+    right: -3px;
+    top: -177px;
+    border-bottom: 120px solid white;
+    border-right: 33px solid transparent;
+    border-top: 30px solid transparent;
+}
+
+@keyframes ship {
+    0% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes wave1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+}
