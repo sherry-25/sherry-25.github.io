@@ -1,0 +1,56 @@
+@font-face {
+font-family: 'Pacifico', cursive;
+src: url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+}
+
+body {
+  margin: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 400px 200px 100px;
+  column-gap: 10px;
+  justify-items: center;
+  text-align: center;
+}
+
+.album {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.d {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end:3;
+  text-align: center;
+}
+
+.e{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end:3;
+  text-align: center;
+}
+
+span {
+  font-family: Pacifico;
+  font-size: 2em;
+  color: #856185;
+}
+
+span2 {
+  font-size: 1em;
+  color: #698360;
+}
+
+.play {
+  margin-top: 50%;
+  width: 50px;
+  height: auto;
+}
